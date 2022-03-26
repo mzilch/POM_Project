@@ -38,7 +38,7 @@ public class testnavigationofpages_TEST_TestNG extends SeleniumHelperBasic{
     	else
     	{
 
-	    	//Navigating To
+	    	//Navigating To 
 	    	driver.get("https://en.wikipedia.org/wiki/Main_Page");
 
 	    	// New Page
