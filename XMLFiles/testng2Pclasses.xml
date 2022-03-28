@@ -3,8 +3,7 @@
 <suite thread-count="2" parallel="classes" name="Suite">
   <test thread-count="2" parallel="classes" name="Test">
     <classes>      
-      <class name="tests.LoginSmoke_TEST_TestNG"/>
-      <class name="tests.VerifyPageElementsExists_TEST_TestNG"/>
+      <class name="tests.aaa_TEST_TestNG"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
