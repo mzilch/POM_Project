@@ -2,8 +2,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="2" parallel="classes" name="Suite">
   <test thread-count="2" parallel="classes" name="Test">
-    <classes>      
-      <class name="tests.aaa_TEST_TestNG"/>
+    <classes> 
+      <class name="tests.AMEXVerifyPageElementsExists_TEST_TestNG"/>     
+      <class name="tests.Verifypageelements_TEST_TestNG"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
