@@ -46,8 +46,9 @@ public class VerifyPageElementsExists_TEST_TestNG extends SeleniumHelperBasic{
 	    	softAssertion.assertTrue(Local_POM_AmexHomePage.Accept_Amex_Cards_DISPLAYED());
 	    	softAssertion.assertTrue(Local_POM_AmexHomePage.Refer_A_Friend_DISPLAYED());
 	    	softAssertion.assertTrue(Local_POM_AmexHomePage.LINKS_YOU_MAY_LIKE_DISPLAYED());
-	    	softAssertion.assertAll();
+	    	
     	}
+    	softAssertion.assertAll();
 	}
 
 }

@@ -18,30 +18,65 @@ public class POM_AmexHomePage extends SeleniumHelperBasic{
 	public POM_AmexHomePage(WebDriver driver){
 		this.driver = driver;
 		wait = new WebDriverWait(driver, 5);
-		ValidatePageTitle(PAGE_Title);
 	}
 
    //Locators
 	By Log_In_Button = By.xpath("//*[@id='gnav_login']");
+
 	By About_American_Express = By.xpath("//a[@class='axp-footer__dls-module__textWrap___3wMeN'][@href='https://about.americanexpress.com/?inav=footer_about_american_express']");
+//	By About_American_Express = By.xpath("//*[@id='amex-footer']/div[1]/div/footer/div[1]/div/div[1]/ul[1]/li[1]/a");
+
 	By Investor_Relations = By.xpath("//a[@class='axp-footer__dls-module__textWrap___3wMeN'][@href='http://ir.americanexpress.com/?inav=footer_about_investor_relations']");
+//	By Investor_Relations = By.xpath("//*[@id='amex-footer']/div[1]/div/footer/div[1]/div/div[1]/ul[1]/li[2]/a");
+
 	By Careers = By.xpath("//a[@class='axp-footer__dls-module__textWrap___3wMeN'][@href='https://www.americanexpress.com/en-us/careers/?inav=footer_careers']");
+//	By Careers = By.xpath("//*[@id='amex-footer']/div[1]/div/footer/div[1]/div/div[1]/ul[1]/li[3]/a");
+
 	By Site_Map = By.xpath("//a[@class='axp-footer__dls-module__textWrap___3wMeN'][@href='https://www.americanexpress.com/us/sitemap.html?inav=footer_sitemap']");
+//	By Site_Map = By.xpath("//*[@id='amex-footer']/div[1]/div/footer/div[1]/div/div[1]/ul[1]/li[4]/a");
+
 	By Contact_Us = By.xpath("//a[@class='axp-footer__dls-module__textWrap___3wMeN'][@href='https://global.americanexpress.com/help?inav=footer_contact'][@rel=''][@target=''][@title='Contact Us'][@tracking='footer_contact']");
+//	By Contact_Us = By.xpath("//*[@id='amex-footer']/div[1]/div/footer/div[1]/div/div[1]/ul[1]/li[5]/a");
+
 	By ABOUT = By.xpath("//*[@class='axp-footer__dls-module__pad3B___1J3uF axp-footer__dls-module__row___3H3xq']/div[1]/h2[1]");
+//	By ABOUT = By.xpath("//*[@id='amex-footer']/div[1]/div/footer/div[1]/div/div[1]/h2[1]");
+
 	By Credit_Cards = By.xpath("//a[@class='axp-footer__dls-module__textWrap___3wMeN'][@href='https://www.americanexpress.com/us/credit-cards/?inav=footer_sitemap']");
+//	By Credit_Cards = By.xpath("//*[@id='amex-footer']/div[1]/div/footer/div[1]/div/div[2]/ul[1]/li[1]/a");
+
 	By Business_Credit_Cards = By.xpath("//a[@class='axp-footer__dls-module__textWrap___3wMeN'][@href='https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/?inav=footer_cards_bus_crdt_crd']");
+//	By Business_Credit_Cards = By.xpath("//*[@id='amex-footer']/div[1]/div/footer/div[1]/div/div[2]/ul[1]/li[2]/a");
+
 	By Corporate_Programs = By.xpath("//a[@class='axp-footer__dls-module__textWrap___3wMeN'][@href='https://www.americanexpress.com/us/credit-cards/business/corporate-credit-cards/?inav=footer_corp_prg']");
+//	By Corporate_Programs = By.xpath("//*[@id='amex-footer']/div[1]/div/footer/div[1]/div/div[2]/ul[1]/li[3]/a");
+
 	By Prepaid_Cards = By.xpath("//*[@id='amex-footer']/div[1]/div/footer/div[1]/div/div[2]/ul[1]/li[4]/a");
+
 	By Savings_Accounts_CDs = By.xpath("//*[@id='amex-footer']/div[1]/div/footer/div[1]/div/div[2]/ul[1]/li[5]/a");
-	By Gift_Cards = By.xpath("//a[@class='axp-footer__dls-module__textWrap___3wMeN'][@href='https://www.americanexpress.com/gift-cards/?inav=menu_cards_giftcards']");
+
+//	By Gift_Cards = By.xpath("//a/*[text()='Gift Cards']");
+	By Gift_Cards = By.xpath("//*[@id='amex-footer']/div[1]/div/footer/div[1]/div/div[2]/ul[1]/li[6]/a");
+
 	By PRODUCTS_SERVICES = By.xpath("//*[@class='axp-footer__dls-module__pad3B___1J3uF axp-footer__dls-module__row___3H3xq']/div[2]/h2[1]");
+//	By PRODUCTS_SERVICES = By.xpath("//*[@id='amex-footer']/div[1]/div/footer/div[1]/div/div[2]/h2[1]");
+
 	By Free_Credit_Score_Report = By.xpath("//a[@class='axp-footer__dls-module__textWrap___3wMeN'][@href='https://www.americanexpress.com/us/credit-cards/features-benefits/free-credit-score?inav=footer_credit_score']");
+//	By Free_Credit_Score_Report = By.xpath("//a/*[text()='Free Credit Score & Report']");
+//	By Free_Credit_Score_Report = By.xpath("//*[@id='amex-footer']/div[1]/div/footer/div[1]/div/div[3]/ul[1]/li[1]/a");
+
 	By CreditSecure = By.xpath("//a[@class='axp-footer__dls-module__textWrap___3wMeN'][@href='https://feeservices.americanexpress.com/premium/credit-report-monitoring/home.do?inav=footer_creditsecure']");
+//	By CreditSecure = By.xpath("//*[@id='amex-footer']/div[1]/div/footer/div[1]/div/div[3]/ul[1]/li[3]/a");
+
 	By Bluebird = By.xpath("//*[@id='amex-footer']/div[1]/div/footer/div[1]/div/div[3]/ul[1]/li[4]/a");
+
 	By Accept_Amex_Cards = By.xpath("//*[@id='amex-footer']/div[1]/div/footer/div[1]/div/div[3]/ul[1]/li[5]/a");
+
 	By Refer_A_Friend = By.xpath("//*[@id='amex-footer']/div[1]/div/footer/div[1]/div/div[3]/ul[1]/li[6]/a");
+
 	By LINKS_YOU_MAY_LIKE = By.xpath("//*[@class='axp-footer__dls-module__pad3B___1J3uF axp-footer__dls-module__row___3H3xq']/div[3]/h2[1]");
+//	By LINKS_YOU_MAY_LIKE = By.xpath("//*[contains(text(),'LI')]");
+//	By LINKS_YOU_MAY_LIKE = By.xpath("//*[@id='amex-footer']/div[1]/div/footer/div[1]/div/div[3]/h2[1]");
+
 
    //Methods
 

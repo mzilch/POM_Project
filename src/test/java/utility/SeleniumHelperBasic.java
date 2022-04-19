@@ -246,15 +246,15 @@ public class SeleniumHelperBasic extends BaseClassBasic{
 	public boolean EnterText(By InByLocator, String strToType)
 	{
 		try {
-		wait = new WebDriverWait(driver, 5);		
-		WebElement EllyMont = driver.findElement(InByLocator);
-        wait.until(ExpectedConditions.visibilityOf(EllyMont));
-        EllyMont.clear();
-        EllyMont.sendKeys(strToType);
-		//InLogger.pass("PASSED - '" + strToType + "' TEXT was ENTERED");
-        System.out.println("PASSED - '" + strToType + "' TEXT was ENTERED");
-		Reporter.log("PASSED - '" + strToType + "' TEXT was ENTERED",true);
-		return true;
+			wait = new WebDriverWait(driver, 5);		
+			WebElement EllyMont = driver.findElement(InByLocator);
+	        wait.until(ExpectedConditions.visibilityOf(EllyMont));
+	        EllyMont.clear();
+	        EllyMont.sendKeys(strToType);
+			//InLogger.pass("PASSED - '" + strToType + "' TEXT was ENTERED");
+	        System.out.println("PASSED - '" + strToType + "' TEXT was ENTERED");
+			Reporter.log("PASSED - '" + strToType + "' TEXT was ENTERED",true);
+			return true;
 		}
 	    catch (TimeoutException e)
 	    {
@@ -300,6 +300,27 @@ public class SeleniumHelperBasic extends BaseClassBasic{
 	    {
 	    	//wait = new WebDriverWait(driver, 20);
 	        //wait.until(ExpectedConditions.visibilityOfElementLocated(InByLocator));
+	    	
+	    	//Slows things down until element is there and has a size
+	    	int waititeration = 0;
+	    	do 
+	    	{
+	    		try {
+					Thread.sleep(500);
+					waititeration++;
+					if(waititeration > 20) 
+					{
+						break;						
+					}
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+					break;
+				}
+	    	}while(driver.findElements(InByLocator).size() == 0);
+	    	
+	    	
+	    	
 	    	
 	    	//This code helps stop a "NoSuchElementException" occurring because if that error occurs the script will stop execution
 	    	if(driver.findElements(InByLocator).size() != 0)
@@ -377,26 +398,47 @@ public class SeleniumHelperBasic extends BaseClassBasic{
 	{
 	    try
 	    {
+	    	//Slows things down until element is there and has a size
+	    	int waititeration = 0;
+	    	do 
+	    	{
+	    		try {
+					Thread.sleep(500);
+					waititeration++;
+					if(waititeration > 20) 
+					{
+						break;						
+					}
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+					break;
+				}
+	    	}while(driver.findElements(InByLocator).size() == 0);
 	    	
-	        switch (Click_How)
-	        {
-	            case "click":
-	                driver.findElement(InByLocator).click();
-	                System.out.println("PASSED - " + eleName + " element was Clicked");
-	                return true;
-	            case "javaClick":
-	                executor = (JavascriptExecutor)driver;
-	                WebElement we = driver.findElement(InByLocator);
-	                executor.executeScript("arguments[0].click(); ", we);
-	                System.out.println("PASSED - " + eleName + " element was javaClicked");
-	                return true;
-	            case "moveToAndClick":
-	                action = new Actions(driver);
-	                WebElement we1 = driver.findElement(InByLocator);
-	                action.moveToElement(we1).click().build().perform();
-	                System.out.println("PASSED - " + eleName + " element was movedToAndClicked");
-	                return true;
-	        }
+	    	if(driver.findElements(InByLocator).size() != 0)
+	    	{ 		
+	    	
+		        switch (Click_How)
+		        {
+		            case "click":
+		                driver.findElement(InByLocator).click();
+		                System.out.println("PASSED - " + eleName + " element was Clicked");
+		                return true;
+		            case "javaClick":
+		                executor = (JavascriptExecutor)driver;
+		                WebElement we = driver.findElement(InByLocator);
+		                executor.executeScript("arguments[0].click(); ", we);
+		                System.out.println("PASSED - " + eleName + " element was javaClicked");
+		                return true;
+		            case "moveToAndClick":
+		                action = new Actions(driver);
+		                WebElement we1 = driver.findElement(InByLocator);
+		                action.moveToElement(we1).click().build().perform();
+		                System.out.println("PASSED - " + eleName + " element was movedToAndClicked");
+		                return true;
+		        }
+	    	}
 	        return false;
 	    }
 	    catch (TimeoutException e)

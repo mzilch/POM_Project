@@ -19,19 +19,46 @@ public class POM_AmexLoginPage extends SeleniumHelperBasic{
 	public POM_AmexLoginPage(WebDriver driver){
 		this.driver = driver;
 		wait = new WebDriverWait(driver, 5);
-		ValidatePageTitle(PAGE_Title);
 	}
 
    //Locators
 	By Cards_My_Account = By.xpath("//*[@class='form-control']/option[1]");
+//	By Cards_My_Account = By.xpath("//*[contains(text(),'Cards - My Account')]");
+//	By Cards_My_Account = By.xpath("//option[text()[contains(.,'Cards - My')]]");
+//	By Cards_My_Account = By.xpath("//option[text()[contains(.,'Cards')]]");
+//	By Cards_My_Account = By.xpath("//option[text()[contains(.,'Cards -')]]");
+//	By Cards_My_Account = By.xpath("//option[text()[contains(.,'My Account')]]");
+//	By Cards_My_Account = By.xpath("//option[text()[contains(.,'- My Account')]]");
+
 	By Membership_Rewards = By.xpath("//*[@class='form-control']/option[2]");
+//	By Membership_Rewards = By.xpath("//option[text()[contains(.,'Membership')]]");
+//	By Membership_Rewards = By.xpath("//option[text()[contains(.,'Membership Rewards')]]");
+
 	By Merchant_Account = By.xpath("//*[@class='form-control']/option[3]");
+//	By Merchant_Account = By.xpath("//option[text()[contains(.,'Merchant')]]");
+//	By Merchant_Account = By.xpath("//option[text()[contains(.,'Merchant Account')]]");
+
 	By American_Express_Work = By.xpath("//*[@class='form-control']/option[4]");
+//	By American_Express_Work = By.xpath("//option[text()[contains(.,'Express @ Work')]]");
+//	By American_Express_Work = By.xpath("//option[text()[contains(.,'American')]]");
+//	By American_Express_Work = By.xpath("//option[text()[contains(.,'American Express')]]");
+//	By American_Express_Work = By.xpath("//option[text()[contains(.,'American Express @')]]");
+//	By American_Express_Work = By.xpath("//option[text()[contains(.,'Work')]]");
+//	By American_Express_Work = By.xpath("//option[text()[contains(.,'@ Work')]]");
+
 	By Dropdown_Account_Type = By.xpath("//select[@class='form-control']");
+//	By Dropdown_Account_Type = By.xpath("//select[@id='eliloSelect']");
+
 	By User_ID = By.xpath("//input[@id='eliloUserID']");
-	By Password = By.xpath("//input[@type='password'][@id='eliloPassword'][@class='form-control']");
+
+	By Password = By.xpath("//input[@type='password'][@id='eliloPassword']");
+//	By Password = By.xpath("//input[@id='eliloPassword']");
+
 	By Remember_Me = By.xpath("//label[text()[contains(.,'Remember Me')]]");
+//	By Remember_Me = By.xpath("//label[text()[contains(.,'Remember')]]");
+
 	By Log_In_Button = By.xpath("//*[@id='loginSubmit']");
+
 
    //Methods
 
