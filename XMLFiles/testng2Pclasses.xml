@@ -3,11 +3,11 @@
 <suite name="Suite">
   <test  name="Test">
     <classes>      
-<!--       <class name="tests.aaa_TEST_TestNG"/>
+      <class name="tests.aaa_TEST_TestNG"/>
       <class name="tests.AMEXVerifyPageElementsExists_TEST_TestNG"/>
       <class name="tests.Login_MZ_TEST_TestNG"/>
       <class name="tests.SideMenuItems_TEST_TestNG"/>
-      <class name="tests.Verifypageelements_TEST_TestNG"/> -->
+      <class name="tests.Verifypageelements_TEST_TestNG"/>
       <class name="tests.VerifyPageElementsExists_TEST_TestNG"/> 
     </classes>
   </test> <!-- Test -->
