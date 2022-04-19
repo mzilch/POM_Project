@@ -15,7 +15,7 @@ public class AMEXVerifyPageElementsExists_TEST_TestNG extends SeleniumHelperBasi
 	@Test()
 	public void AMEXVerifyPageElementsExists() throws InterruptedException {
 
-    	System.out.println("--- Started Test");
+    	System.out.println("--- Started Test = AMEXVerifyPageElementsExists_TEST_TestNG");
 
     	//Navigating To
     	driver.get("https://www.americanexpress.com/");

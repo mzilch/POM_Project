@@ -15,7 +15,7 @@ public class aaa_TEST_TestNG extends SeleniumHelperBasic{
 	@Test()
 	public void aaa() throws InterruptedException {
 
-    	System.out.println("--- Started Test");
+    	System.out.println("--- Started Test = aaa_TEST_TestNG");
 
     	//Navigating To
     	driver.get("https://www.pnc.com/en/small-business.html?lnksrc=topnav");

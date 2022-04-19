@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="2" parallel="classes" name="Suite">
-  <test thread-count="2" parallel="classes" name="Test">
+<suite name="Suite">
+  <test  name="Test">
     <classes> 
-      <class name="tests.AMEXVerifyPageElementsExists_TEST_TestNG"/>     
+    
+      <class name="tests.TransferFromToAccount_TEST_TestNG"/> 
+      <class name="tests.aaa_TEST_TestNG"/>
+      <class name="tests.AMEXVerifyPageElementsExists_TEST_TestNG"/>
+      <class name="tests.Login_MZ_TEST_TestNG"/>
+      <class name="tests.Login_Path_TEST_TestNG"/>
+      <class name="tests.LoginPageverifyAlinks_TEST_TestNG"/>
+      <class name="tests.SideMenuItems_TEST_TestNG"/>
       <class name="tests.Verifypageelements_TEST_TestNG"/>
+      <class name="tests.VerifyPageElementsExists_TEST_TestNG"/> 
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

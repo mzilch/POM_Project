@@ -15,7 +15,7 @@ public class VerifyPageElementsExists_TEST_TestNG extends SeleniumHelperBasic{
 	@Test()
 	public void VerifyPageElementsExists() throws InterruptedException {
 
-    	System.out.println("--- Started Test");
+    	System.out.println("--- Started Test = VerifyPageElementsExists_TEST_TestNG");
 
     	//Navigating To
     	driver.get("https://www.americanexpress.com/");

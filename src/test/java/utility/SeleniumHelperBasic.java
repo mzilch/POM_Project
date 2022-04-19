@@ -298,48 +298,55 @@ public class SeleniumHelperBasic extends BaseClassBasic{
 	{
 	    try
 	    {
-	    	wait = new WebDriverWait(driver, 20);
-	        WebElement EllyMont = driver.findElement(InByLocator);
-	        wait.until(ExpectedConditions.visibilityOf(EllyMont));
-
-	        switch (VerificationType)
-	        {
-	            case "displayed":
-	                if (EllyMont.isDisplayed())
-	                {
-	                    System.out.println("PASSED - " + eleName + " element is Displayed");
-	                    return true;
-	                }
-	                else
-	                {
-	                    System.out.println("FAILED - " + eleName + " element is NOT Displayed");
-	                    return false;
-	                }
-	            case "enabled":
-	                if (EllyMont.isEnabled())
-	                {
-	                    System.out.println("PASSED - " + eleName + " element is Enabled");
-	                    return true;
-	                }
-	                else
-	                {
-	                    System.out.println("FAILED - " + eleName + " element is NOT Enabled");
-	                    return false;
-	                }
+	    	//wait = new WebDriverWait(driver, 20);
+	        //wait.until(ExpectedConditions.visibilityOfElementLocated(InByLocator));
+	    	
+	    	//This code helps stop a "NoSuchElementException" occurring because if that error occurs the script will stop execution
+	    	if(driver.findElements(InByLocator).size() != 0)
+	        //if(!driver.findElements(InByLocator).isEmpty()) //This code will work as well as a substitute so NoSuchElementException occurs
+	        {   
+	        	WebElement EllyMont = driver.findElement(InByLocator);
+	        
+		        switch (VerificationType)
+		        {
+		            case "displayed":
+		                if (EllyMont.isDisplayed())
+		                {
+		                    System.out.println("PASSED - " + eleName + " element is Displayed");
+		                    return true;
+		                }
+		                else
+		                {
+		                    System.out.println("FAILED - " + eleName + " element is NOT Displayed");
+		                    return false;
+		                }
+		            case "enabled":
+		                if (EllyMont.isEnabled())
+		                {
+		                    System.out.println("PASSED - " + eleName + " element is Enabled");
+		                    return true;
+		                }
+		                else
+		                {
+		                    System.out.println("FAILED - " + eleName + " element is NOT Enabled");
+		                    return false;
+		                }
+		        }
+		        return true;
 	        }
-	        return true;
+	        return false;
 	    }
 	    catch (TimeoutException e)
 	    {
 	        System.out.println("FAILED - " + eleName + " Wait for element has timed out XPath Failed: ");
-	        System.out.println("'TimeOut' Exception - WebDriver Waited and couldn’t locate the element");
+	        System.out.println("'TimeOut' Exception - WebDriver Waited and could not locate the element");
 	        System.out.println(e.getMessage());
 	        return false;
 	    }
 	    catch (NoSuchElementException e1)
 	    {
 	        System.out.println("FAILED - " + eleName + " element is NOT Displayed XPath Failed: ");
-	        System.out.println("'NoSuchElementException' Exception - WebDriver couldn’t locate the element");
+	        System.out.println("'NoSuchElementException' Exception - WebDriver could not locate the element");
 	        System.out.println(e1.getMessage());
 	        return false;
 	    }
@@ -395,14 +402,14 @@ public class SeleniumHelperBasic extends BaseClassBasic{
 	    catch (TimeoutException e)
 	    {
 	        System.out.println("FAILED - " + eleName + " Wait for element has timed out XPath Failed: ");
-	        System.out.println("'TimeOut' Exception - WebDriver Waited and couldn’t locate the element");
+	        System.out.println("'TimeOut' Exception - WebDriver Waited and could not locate the element");
 	        System.out.println(e.getMessage());
 	        return false;
 	    }
 	    catch (NoSuchElementException e1)
 	    {
 	        System.out.println("FAILED - " + eleName + " element is NOT Displayed XPath Failed: ");
-	        System.out.println("'NoSuchElementException' Exception - WebDriver couldn’t locate the element");
+	        System.out.println("'NoSuchElementException' Exception - WebDriver could not locate the element");
 	        System.out.println(e1.getMessage());
 	        return false;
 	    }

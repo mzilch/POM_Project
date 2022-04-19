@@ -15,7 +15,7 @@ public class Verifypageelements_TEST_TestNG extends SeleniumHelperBasic{
 	@Test()
 	public void Verifypageelements() throws InterruptedException {
 
-    	System.out.println("--- Started Test");
+    	System.out.println("--- Started Test = Verifypageelements_TEST_TestNG");
 
     	//Navigating To
     	driver.get("https://en.wikipedia.org/wiki/Main_Page");
