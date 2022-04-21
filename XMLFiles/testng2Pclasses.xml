@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test  name="Test">
     <classes>   
-    <class name="tests.fOOTERLINKSValidations_TEST_TestNG"/>   
+    <class name="tests.Notification_Text_Validations_TEST_TestNG"/>   
 <!--       <class name="tests.aaa_TEST_TestNG"/>
       <class name="tests.AMEXVerifyPageElementsExists_TEST_TestNG"/>
       <class name="tests.Login_MZ_TEST_TestNG"/>

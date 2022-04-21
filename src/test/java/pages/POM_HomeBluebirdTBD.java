@@ -22,47 +22,19 @@ public class POM_HomeBluebirdTBD extends SeleniumHelperBasic{
 
    //Locators
 	By Money_In_Side_Menuitem = By.xpath("//a[@data-testid='bb-side-navigation__nav-list--moneyIn']");
-//	By Money_In_Side_Menuitem = By.xpath("//*[contains(text(),'Money In')]");
-//	By Money_In_Side_Menuitem = By.xpath("//a/*[text()='Money In']");
-//	By Money_In_Side_Menuitem = By.xpath("//*[@class='bb-side-navigation__nav-list']/li[2]/a");
-//	By Money_In_Side_Menuitem = By.xpath("//*[@class='bb-side-navigation']/nav[1]/ul/li[2]/a");
-//	By Money_In_Side_Menuitem = By.xpath("//*[@id='root']/div/div[2]/nav[1]/ul/li[2]/a");
-//	By Money_In_Side_Menuitem = By.xpath("//html/body[1]/div[1]/div/div[2]/nav[1]/ul/li[2]/a");
-
 	By Marks_Account_Main_Account = By.xpath("//a[@data-testid='bb-accounts-list__link_toAccounts-0']");
-//	By Marks_Account_Main_Account = By.xpath("//a[@href='/accounts/5d86ed2bd4f84b799fb86d5237f8d9c9']");
-//	By Marks_Account_Main_Account = By.xpath("//*[@id='main']/div/div/div[2]/div[3]/div/div[1]/div/div[1]/div/div[1]/div/div/div/a[1]");
-//	By Marks_Account_Main_Account = By.xpath("//html/body[1]/div[1]/div/div[3]/div/div/div[2]/div[3]/div/div[1]/div/div[1]/div/div[1]/div/div/div/a[1]");
-
 	By Add_Money = By.xpath("//a[@data-keyboard-focus='false']");
-//	By Add_Money = By.xpath("//*[@id='main']/div/div/div[2]/div[3]/div/div[1]/div/div[1]/div/div[1]/div/div/div/span[1]/a[1]");
-//	By Add_Money = By.xpath("//html/body[1]/div[1]/div/div[3]/div/div/div[2]/div[3]/div/div[1]/div/div[1]/div/div[1]/div/div/div/span[1]/a[1]");
-
 	By Evelyns_Subaccount_Subaccount = By.xpath("//a[@data-testid='bb-accounts-list__link_toAccounts-1']");
-//	By Evelyns_Subaccount_Subaccount = By.xpath("//a[@href='/accounts/8de66fdce66b4e878f94e3c404d9cba8']");
-//	By Evelyns_Subaccount_Subaccount = By.xpath("//*[@id='main']/div/div/div[2]/div[3]/div/div[1]/div/div[1]/div/div[2]/div/div/div/a[1]");
-//	By Evelyns_Subaccount_Subaccount = By.xpath("//html/body[1]/div[1]/div/div[3]/div/div/div[2]/div[3]/div/div[1]/div/div[1]/div/div[2]/div/div/div/a[1]");
-
 	By Add_Money_1 = By.xpath("//*[@id='main']/div/div/div[2]/div[3]/div/div[1]/div/div[1]/div/div[2]/div/div/div/span[1]/a[1]");
-//	By Add_Money_1 = By.xpath("//html/body[1]/div[1]/div/div[3]/div/div/div[2]/div[3]/div/div[1]/div/div[1]/div/div[2]/div/div/div/span[1]/a[1]");
-
 	By Add_Subaccount = By.xpath("//a[@class='bb-accounts-list__slider-new-btn']");
-//	By Add_Subaccount = By.xpath("//a[@href='/accounts/add-family-account']");
-//	By Add_Subaccount = By.xpath("//*[contains(text(),'Add Subaccount')]");
-//	By Add_Subaccount = By.xpath("//a[text()[contains(.,'Add Subaccount')]]");
-//	By Add_Subaccount = By.xpath("//*[@class='bb-accounts-list__slider-item bb-accounts-list__slider-new bb-accounts-list__slider-center']/a[1]");
-//	By Add_Subaccount = By.xpath("//*[@id='main']/div/div/div[2]/div[3]/div/div[1]/div/div[1]/div/div[3]/div/div/div/a[1]");
-//	By Add_Subaccount = By.xpath("//html/body[1]/div[1]/div/div[3]/div/div/div[2]/div[3]/div/div[1]/div/div[1]/div/div[3]/div/div/div/a[1]");
-
 	By Add_Goal = By.xpath("//a[@class='bb-goals-list__add-goal-btn-link']");
-//	By Add_Goal = By.xpath("//a[@href='/goals/add-goal']");
-//	By Add_Goal = By.xpath("//*[contains(text(),'Add Goal')]");
-//	By Add_Goal = By.xpath("//a[text()[contains(.,'Add Goal')]]");
-//	By Add_Goal = By.xpath("//*[@class='bb-goals-list__add-goal-btn']/a[1]");
-//	By Add_Goal = By.xpath("//*[@class='bb-goals-list__footer']/div/a[1]");
-//	By Add_Goal = By.xpath("//*[@id='main']/div/div/div[2]/div[4]/div[2]/div/div[1]/div[2]/div/a[1]");
-//	By Add_Goal = By.xpath("//html/body[1]/div[1]/div/div[3]/div/div/div[2]/div[4]/div[2]/div/div[1]/div[2]/div/a[1]");
-
+	By EnrollinDirectDepositHaveyourpaycheckorgo = By.xpath("//div[@class='bb-alert-box']");
+	By Previous_Notification = By.xpath("//*[@class='d-flex inner-navigation']/button[1]");
+	By Next_Notification = By.xpath("//*[@class='d-flex inner-navigation']/button[2]");
+	By Enroll_Now_Button = By.xpath("//button[@data-testid='bb-alert-box__btn-main']");
+	By Remind_Me_Later_Button = By.xpath("//button[@data-testid='bb-alert-box__btn-skip']");
+	By Notification_Text = By.xpath("//p[@class='bb-alert-box__description']");
+	By Notification_Header_Text = By.xpath("//span[@class='bb-alert-box__title']");
 
    //Methods
 
@@ -240,5 +212,180 @@ public class POM_HomeBluebirdTBD extends SeleniumHelperBasic{
   	}
 	public String Add_Goal_GETTEXT(){
 	    return driver.findElement(Add_Goal).getText();	}
+
+   // EnrollinDirectDepositHaveyourpaycheckorgo
+	public boolean EnrollinDirectDepositHaveyourpaycheckorgo_DISPLAYED(){
+	    return VerifyElement(EnrollinDirectDepositHaveyourpaycheckorgo,"displayed","EnrollinDirectDepositHaveyourpaycheckorgo");
+	}
+	public boolean EnrollinDirectDepositHaveyourpaycheckorgo_ENABLED(){
+	    return VerifyElement(EnrollinDirectDepositHaveyourpaycheckorgo,"enabled","EnrollinDirectDepositHaveyourpaycheckorgo");
+	}
+	public boolean EnrollinDirectDepositHaveyourpaycheckorgo_MOUSEOVER(){
+	    action = new Actions(driver);
+	    WebElement we = driver.findElement(EnrollinDirectDepositHaveyourpaycheckorgo);
+	    action.moveToElement(we).build().perform();
+	    return true;
+	}
+	public boolean EnrollinDirectDepositHaveyourpaycheckorgo_MOVETOANDCLICK(){
+	    return Element_Click(EnrollinDirectDepositHaveyourpaycheckorgo, "moveToAndClick","EnrollinDirectDepositHaveyourpaycheckorgo");
+ 	}
+	public boolean EnrollinDirectDepositHaveyourpaycheckorgo_CLICK_JAVASCRIPT(){
+	    return Element_Click(EnrollinDirectDepositHaveyourpaycheckorgo, "javaClick","EnrollinDirectDepositHaveyourpaycheckorgo");
+  	}
+	public boolean EnrollinDirectDepositHaveyourpaycheckorgo_CLICK(){
+	    return Element_Click(EnrollinDirectDepositHaveyourpaycheckorgo, "click","EnrollinDirectDepositHaveyourpaycheckorgo");
+  	}
+	public String EnrollinDirectDepositHaveyourpaycheckorgo_GETTEXT(){
+	    return driver.findElement(EnrollinDirectDepositHaveyourpaycheckorgo).getText();	}
+
+   // Previous_Notification
+	public boolean Previous_Notification_DISPLAYED(){
+	    return VerifyElement(Previous_Notification,"displayed","Previous_Notification");
+	}
+	public boolean Previous_Notification_ENABLED(){
+	    return VerifyElement(Previous_Notification,"enabled","Previous_Notification");
+	}
+	public boolean Previous_Notification_MOUSEOVER(){
+	    action = new Actions(driver);
+	    WebElement we = driver.findElement(Previous_Notification);
+	    action.moveToElement(we).build().perform();
+	    return true;
+	}
+	public boolean Previous_Notification_MOVETOANDCLICK(){
+	    return Element_Click(Previous_Notification, "moveToAndClick","Previous_Notification");
+ 	}
+	public boolean Previous_Notification_CLICK_JAVASCRIPT(){
+	    return Element_Click(Previous_Notification, "javaClick","Previous_Notification");
+  	}
+	public boolean Previous_Notification_CLICK(){
+	    return Element_Click(Previous_Notification, "click","Previous_Notification");
+  	}
+	public String Previous_Notification_GETTEXT(){
+	    return driver.findElement(Previous_Notification).getText();	}
+
+   // Next_Notification
+	public boolean Next_Notification_DISPLAYED(){
+	    return VerifyElement(Next_Notification,"displayed","Next_Notification");
+	}
+	public boolean Next_Notification_ENABLED(){
+	    return VerifyElement(Next_Notification,"enabled","Next_Notification");
+	}
+	public boolean Next_Notification_MOUSEOVER(){
+	    action = new Actions(driver);
+	    WebElement we = driver.findElement(Next_Notification);
+	    action.moveToElement(we).build().perform();
+	    return true;
+	}
+	public boolean Next_Notification_MOVETOANDCLICK(){
+	    return Element_Click(Next_Notification, "moveToAndClick","Next_Notification");
+ 	}
+	public boolean Next_Notification_CLICK_JAVASCRIPT(){
+	    return Element_Click(Next_Notification, "javaClick","Next_Notification");
+  	}
+	public boolean Next_Notification_CLICK(){
+	    return Element_Click(Next_Notification, "click","Next_Notification");
+  	}
+	public String Next_Notification_GETTEXT(){
+	    return driver.findElement(Next_Notification).getText();	}
+
+   // Enroll_Now_Button
+	public boolean Enroll_Now_Button_DISPLAYED(){
+	    return VerifyElement(Enroll_Now_Button,"displayed","Enroll_Now_Button");
+	}
+	public boolean Enroll_Now_Button_ENABLED(){
+	    return VerifyElement(Enroll_Now_Button,"enabled","Enroll_Now_Button");
+	}
+	public boolean Enroll_Now_Button_MOUSEOVER(){
+	    action = new Actions(driver);
+	    WebElement we = driver.findElement(Enroll_Now_Button);
+	    action.moveToElement(we).build().perform();
+	    return true;
+	}
+	public boolean Enroll_Now_Button_MOVETOANDCLICK(){
+	    return Element_Click(Enroll_Now_Button, "moveToAndClick","Enroll_Now_Button");
+ 	}
+	public boolean Enroll_Now_Button_CLICK_JAVASCRIPT(){
+	    return Element_Click(Enroll_Now_Button, "javaClick","Enroll_Now_Button");
+  	}
+	public boolean Enroll_Now_Button_CLICK(){
+	    return Element_Click(Enroll_Now_Button, "click","Enroll_Now_Button");
+  	}
+	public String Enroll_Now_Button_GETTEXT(){
+	    return driver.findElement(Enroll_Now_Button).getText();	}
+
+   // Remind_Me_Later_Button
+	public boolean Remind_Me_Later_Button_DISPLAYED(){
+	    return VerifyElement(Remind_Me_Later_Button,"displayed","Remind_Me_Later_Button");
+	}
+	public boolean Remind_Me_Later_Button_ENABLED(){
+	    return VerifyElement(Remind_Me_Later_Button,"enabled","Remind_Me_Later_Button");
+	}
+	public boolean Remind_Me_Later_Button_MOUSEOVER(){
+	    action = new Actions(driver);
+	    WebElement we = driver.findElement(Remind_Me_Later_Button);
+	    action.moveToElement(we).build().perform();
+	    return true;
+	}
+	public boolean Remind_Me_Later_Button_MOVETOANDCLICK(){
+	    return Element_Click(Remind_Me_Later_Button, "moveToAndClick","Remind_Me_Later_Button");
+ 	}
+	public boolean Remind_Me_Later_Button_CLICK_JAVASCRIPT(){
+	    return Element_Click(Remind_Me_Later_Button, "javaClick","Remind_Me_Later_Button");
+  	}
+	public boolean Remind_Me_Later_Button_CLICK(){
+	    return Element_Click(Remind_Me_Later_Button, "click","Remind_Me_Later_Button");
+  	}
+	public String Remind_Me_Later_Button_GETTEXT(){
+	    return driver.findElement(Remind_Me_Later_Button).getText();	}
+
+   // Notification_Text
+	public boolean Notification_Text_DISPLAYED(){
+	    return VerifyElement(Notification_Text,"displayed","Notification_Text");
+	}
+	public boolean Notification_Text_ENABLED(){
+	    return VerifyElement(Notification_Text,"enabled","Notification_Text");
+	}
+	public boolean Notification_Text_MOUSEOVER(){
+	    action = new Actions(driver);
+	    WebElement we = driver.findElement(Notification_Text);
+	    action.moveToElement(we).build().perform();
+	    return true;
+	}
+	public boolean Notification_Text_MOVETOANDCLICK(){
+	    return Element_Click(Notification_Text, "moveToAndClick","Notification_Text");
+ 	}
+	public boolean Notification_Text_CLICK_JAVASCRIPT(){
+	    return Element_Click(Notification_Text, "javaClick","Notification_Text");
+  	}
+	public boolean Notification_Text_CLICK(){
+	    return Element_Click(Notification_Text, "click","Notification_Text");
+  	}
+	public String Notification_Text_GETTEXT(){
+	    return driver.findElement(Notification_Text).getText();	}
+
+   // Notification_Header_Text
+	public boolean Notification_Header_Text_DISPLAYED(){
+	    return VerifyElement(Notification_Header_Text,"displayed","Notification_Header_Text");
+	}
+	public boolean Notification_Header_Text_ENABLED(){
+	    return VerifyElement(Notification_Header_Text,"enabled","Notification_Header_Text");
+	}
+	public boolean Notification_Header_Text_MOUSEOVER(){
+	    action = new Actions(driver);
+	    WebElement we = driver.findElement(Notification_Header_Text);
+	    action.moveToElement(we).build().perform();
+	    return true;
+	}
+	public boolean Notification_Header_Text_MOVETOANDCLICK(){
+	    return Element_Click(Notification_Header_Text, "moveToAndClick","Notification_Header_Text");
+ 	}
+	public boolean Notification_Header_Text_CLICK_JAVASCRIPT(){
+	    return Element_Click(Notification_Header_Text, "javaClick","Notification_Header_Text");
+  	}
+	public boolean Notification_Header_Text_CLICK(){
+	    return Element_Click(Notification_Header_Text, "click","Notification_Header_Text");
+  	}
+	public String Notification_Header_Text_GETTEXT(){
+	    return driver.findElement(Notification_Header_Text).getText();	}
 
 }
