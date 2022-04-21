@@ -29,7 +29,7 @@ public class Notification_Text_Validations_TEST_TestNG extends SeleniumHelperBas
     	softAssertion.assertTrue(Local_POM_LoginBluebirdTBD.Log_In_Button_CLICK());
 
     	// Wait Setting
-    	Thread.sleep(5000);
+    	//Thread.sleep(5000);
 
     	// New Page
     	Local_POM_HomeBluebirdTBD = new POM_HomeBluebirdTBD(driver);
