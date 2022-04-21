@@ -303,7 +303,7 @@ public class SeleniumHelperBasic extends BaseClassBasic{
 	    	
 	    	//Slows things down until element is there and has a size
 	    	int waititeration = 0;
-	    	do 
+	    	while(driver.findElements(InByLocator).size() == 0)
 	    	{
 	    		try {
 					Thread.sleep(500);
@@ -317,7 +317,7 @@ public class SeleniumHelperBasic extends BaseClassBasic{
 					e.printStackTrace();
 					break;
 				}
-	    	}while(driver.findElements(InByLocator).size() == 0);
+	    	}
 	    	
 	    	
 	    	
@@ -400,7 +400,7 @@ public class SeleniumHelperBasic extends BaseClassBasic{
 	    {
 	    	//Slows things down until element is there and has a size
 	    	int waititeration = 0;
-	    	do 
+	    	while(driver.findElements(InByLocator).size() == 0) 
 	    	{
 	    		try {
 					Thread.sleep(500);
@@ -414,7 +414,7 @@ public class SeleniumHelperBasic extends BaseClassBasic{
 					e.printStackTrace();
 					break;
 				}
-	    	}while(driver.findElements(InByLocator).size() == 0);
+	    	}
 	    	
 	    	if(driver.findElements(InByLocator).size() != 0)
 	    	{ 		
